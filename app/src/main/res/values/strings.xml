@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Dice Simulator</string>
+
+    <string name="Sobre_titulo">Ultimate Dice Simulator</string>
+
+    <string name="sobre"> Ultimate Dice Simulator é um app feito para auxiliar usuários que desejam agilizar o processo de jogar os dados, seja em um jogo
+        ( RPGs, Banco imobiliário, etc... ), como em jogos de azar ( Roleta, Pôquer de dados, etc...).
+        O usuário terá a liberdade de escolher qual o numero máximo a ser tirado e a quantidade de vezes que o dado será
+        rolado, gerando para ele uma lista que com apenas um toque, ela sera copiada para o clipboard, assim, podendo compartilhar os números gerados. O app possuíra
+        também um sistema de histórico, para que assim, o usuário possa saber como foram os números tirados anteriormente, prevenindo intrigas entre os participantes do jogo.</string>
+
+    <string name="nomes"> Abner Ferrante   |    Jackson Muniz</string>
 </resources>

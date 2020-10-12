@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 NumMaximo = Integer.valueOf(edtNumMaximo.getText().toString());
             }
 
-            //eu só quero passar de ano e cagar, bicho.
+            //eu só quero passar de ano e cagar, bichoa.
             Integer[] randomNumbers = new Integer[qntdRolar];
             Random rand = new Random();
             for(int i = 0;i<qntdRolar;i++) {
@@ -41,6 +41,4 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)findViewById(R.id.btnSubmit);
         button.setOnClickListener(corkyListener);
     }
-
-
 }

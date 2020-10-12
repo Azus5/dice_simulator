@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
                 qntdRolar =  Integer.valueOf(edtQntdRolar.getText().toString());
                 NumMaximo = Integer.valueOf(edtNumMaximo.getText().toString());
             }
+
+            //eu só quero passar de ano e cagar, bicho.
             Integer[] randomNumbers = new Integer[qntdRolar];
             Random rand = new Random();
             for(int i = 0;i<qntdRolar;i++) {

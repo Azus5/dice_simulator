@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#646464"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtNMaximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:text="N° máximo:"
+        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintLeft_toLeftOf="@id/btnSubmit"/>
+
+    <EditText
+        android:id="@+id/qntdRolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_marginLeft="5dp"
+        android:maxLength="2"
+        android:hint="0"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintRight_toRightOf="@id/btnSubmit"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
+
+    <TextView
+        android:id="@+id/txtRolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:text="Rolar:"
+        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintRight_toLeftOf="@id/qntdRolar"/>
+
+    <EditText
+        android:id="@+id/numMaximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="15dp"
+        android:maxLength="2"
+        android:hint="0"
+        app:layout_constraintLeft_toRightOf="@id/txtNMaximo"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_corners"
+        android:textColor="@color/colorWhite"
+        android:text="Rolar"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

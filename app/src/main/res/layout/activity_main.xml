@@ -1,75 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#646464"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <TextView
-        android:id="@+id/txtNMaximo"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
-        android:text="N° máximo:"
-        android:textSize="25dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
-        app:layout_constraintLeft_toLeftOf="@id/btnSubmit"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_main_drawer"/>
 
-    <EditText
-        android:id="@+id/qntdRolar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="25dp"
-        android:layout_marginLeft="5dp"
-        android:maxLength="2"
-        android:hint="0"
-        android:background="@color/colorWhite"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintRight_toRightOf="@id/btnSubmit"
-        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
-
-    <TextView
-        android:id="@+id/txtRolar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
-        android:text="Rolar:"
-        android:textSize="25dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="5dp"
-        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
-        app:layout_constraintRight_toLeftOf="@id/qntdRolar"/>
-
-    <EditText
-        android:id="@+id/numMaximo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="25dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/colorWhite"
-        android:layout_marginBottom="15dp"
-        android:maxLength="2"
-        android:hint="0"
-        app:layout_constraintLeft_toRightOf="@id/txtNMaximo"
-        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="316dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_corners"
-        android:textColor="@color/colorWhite"
-        android:text="Rolar"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

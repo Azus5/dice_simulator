@@ -7,9 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class HomeFragment extends Fragment {
@@ -33,6 +36,12 @@ public class HomeFragment extends Fragment {
                 Log.d("Execução: ", String.valueOf(i));
                 Log.d("Val: ", randomNumbers[i].toString());
             }
+
+            TextView txtNumbers = (TextView)view.findViewById(R.id.numbers);
+            ImageView copyIcon = (ImageView)view.findViewById(R.id.copy_icon);
+            txtNumbers.setText(Arrays.toString(randomNumbers));
+            copyIcon.setVisibility(View.VISIBLE);
+
         }
     };
 

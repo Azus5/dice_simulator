@@ -1,5 +1,6 @@
 package com.example.dicesimulator;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.dicesimulator.dao.RoleDAO;
+import com.example.dicesimulator.model.Role;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -29,17 +33,18 @@ public class HomeFragment extends Fragment {
                 NumMaximo = Integer.valueOf(edtNumMaximo.getText().toString());
             }
 
-            Integer[] randomNumbers = new Integer[qntdRolar];
+            String nums = "[ ";
             Random rand = new Random();
             for(int i = 0;i<qntdRolar;i++) {
-                randomNumbers[i] = rand.nextInt(NumMaximo);
-                Log.d("Execução: ", String.valueOf(i));
-                Log.d("Val: ", randomNumbers[i].toString());
+                nums += String.valueOf(rand.nextInt(NumMaximo)) + " ";
             }
+            nums += "]";
+            RoleDAO roleDao = new RoleDAO(view.getContext());
+            roleDao.create(new Role(0, nums));
 
             TextView txtNumbers = (TextView)view.findViewById(R.id.numbers);
             ImageView copyIcon = (ImageView)view.findViewById(R.id.copy_icon);
-            txtNumbers.setText(Arrays.toString(randomNumbers));
+            txtNumbers.setText(nums);
             copyIcon.setVisibility(View.VISIBLE);
 
         }

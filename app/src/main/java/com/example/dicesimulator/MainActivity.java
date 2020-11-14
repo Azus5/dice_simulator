@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(new SobreFragment());
                 } else if(id == R.id.nav_home) {
                     loadFragment(new HomeFragment());
+                } else if(id == R.id.nav_history) {
+                    loadFragment(new HistoryFragment());
                 }
                 drawer.closeDrawer(GravityCompat.START);
                 return true;

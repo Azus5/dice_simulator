@@ -9,6 +9,8 @@
         rolado, gerando para ele uma lista que com apenas um toque, ela sera copiada para o clipboard, assim, podendo compartilhar os números gerados. O app possuíra
         também um sistema de histórico, para que assim, o usuário possa saber como foram os números tirados anteriormente, prevenindo intrigas entre os participantes do jogo.</string>
 
+    <string name="historico">Histórico</string>
+
     <string name="nomes"> Abner Ferrante   |    Jackson Muniz</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
